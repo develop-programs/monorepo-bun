@@ -351,6 +351,11 @@ bun run build:admin  # Build admin app only
 6. Push to the branch: `git push origin feature/new-feature`
 7. Submit a pull request
 
+## 📚 Repositories
+
+- **GitHub**: [https://github.com/develop-programs/monorepo-bun](https://github.com/develop-programs/monorepo-bun)
+- **NPM**: [https://www.npmjs.com/package/bun-monorepo-template](https://www.npmjs.com/package/bun-monorepo-template)
+
 ## 🏃‍♂️ Getting Started Examples
 
 ### Build a Multi-tenant SaaS

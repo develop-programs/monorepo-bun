@@ -1,35 +1,56 @@
 {
-  "name": "portfolio-monorepo-template",
-  "type": "module",
+  "name": "bun-monorepo-template",
   "version": "1.0.0",
-  "description": "A comprehensive portfolio starter template built as a monorepo for junior developers",
+  "description": "A comprehensive bun monorepo starter template built as a monorepo for junior developers",
   "keywords": [
-    "portfolio-template",
     "monorepo",
     "react",
     "typescript",
     "vite",
     "starter-kit",
     "junior-developer",
-    "template"
+    "template",
+    "bun"
   ],
   "author": "Shreyansh Awadhiya",
   "license": "MIT",
+  "publishConfig": {
+    "registry": "https://www.npmjs.com/package/bun-monorepo-template"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/portfolio-monorepo-template.git"
+    "url": "git+https://github.com/develop-programs/monorepo-bun.git"
   },
-  "homepage": "https://github.com/your-username/portfolio-monorepo-template#readme",
+  "homepage": "https://github.com/develop-programs/monorepo-bun#readme",
   "bugs": {
-    "url": "https://github.com/your-username/portfolio-monorepo-template/issues"
+    "url": "https://github.com/develop-programs/monorepo-bun.git"
   },
   "files": [
-    "apps/",
+    "apps/web/src/",
+    "apps/web/public/",
+    "apps/web/package.json",
+    "apps/web/vite.config.ts",
+    "apps/web/tsconfig*.json",
+    "apps/web/eslint.config.js",
+    "apps/web/index.html",
+    "apps/web/README.md",
+    "apps/admin/src/",
+    "apps/admin/public/",
+    "apps/admin/package.json",
+    "apps/admin/vite.config.ts",
+    "apps/admin/tsconfig*.json",
+    "apps/admin/eslint.config.js",
+    "apps/admin/index.html",
+    "apps/admin/README.md",
+    "apps/server/src/",
+    "apps/server/package.json",
+    "apps/server/eslint.config.js",
     "tsconfig.json",
-    "README.md"
+    "README.md",
+    "LICENSE"
   ],
   "engines": {
-    "node": ">=20.0.0"
+    "node": ">=18.0.0"
   },
   "scripts": {
     "dev": "concurrently \"cd apps/web && bun run dev\" \"cd apps/admin && bun run dev\" \"cd apps/server && bun run dev\" --names \"web,admin,server\" --prefix-colors \"blue,green,yellow\"",
@@ -43,6 +64,7 @@
     "start:server": "cd apps/server && bun run start",
     "build:web": "cd apps/web && bun run build",
     "build:admin": "cd apps/admin && bun run build",
+    "clean": "rm -rf apps/*/node_modules apps/*/dist apps/*/.vite apps/*/.tmp && rm -rf node_modules",
     "postinstall": "echo '✅ Portfolio template ready! Run: bun run dev'"
   },
   "devDependencies": {
