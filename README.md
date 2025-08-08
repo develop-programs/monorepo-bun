@@ -23,7 +23,7 @@ This template is perfect for teams or individuals looking to build scalable mult
 1. **Clone the repository:**
 
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/develop-programs/monorepo-bun.git
    cd bun-structured-monorepo
    ```
 
