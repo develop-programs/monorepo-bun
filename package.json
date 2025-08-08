@@ -1,8 +1,36 @@
 {
-  "name": "portfolio",
+  "name": "portfolio-monorepo-template",
   "type": "module",
   "version": "1.0.0",
-  "private": true,
+  "description": "A comprehensive portfolio starter template built as a monorepo for junior developers",
+  "keywords": [
+    "portfolio-template",
+    "monorepo",
+    "react",
+    "typescript",
+    "vite",
+    "starter-kit",
+    "junior-developer",
+    "template"
+  ],
+  "author": "Shreyansh Awadhiya",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/portfolio-monorepo-template.git"
+  },
+  "homepage": "https://github.com/your-username/portfolio-monorepo-template#readme",
+  "bugs": {
+    "url": "https://github.com/your-username/portfolio-monorepo-template/issues"
+  },
+  "files": [
+    "apps/",
+    "tsconfig.json",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "scripts": {
     "dev": "concurrently \"cd apps/web && bun run dev\" \"cd apps/admin && bun run dev\" \"cd apps/server && bun run dev\" --names \"web,admin,server\" --prefix-colors \"blue,green,yellow\"",
     "start": "concurrently \"cd apps/web && bun run start\" \"cd apps/admin && bun run start\" \"cd apps/server && bun run start\" --names \"web,admin,server\" --prefix-colors \"blue,green,yellow\"",
@@ -14,14 +42,9 @@
     "start:admin": "cd apps/admin && bun run start",
     "start:server": "cd apps/server && bun run start",
     "build:web": "cd apps/web && bun run build",
-    "build:admin": "cd apps/admin && bun run build"
+    "build:admin": "cd apps/admin && bun run build",
+    "postinstall": "echo '✅ Portfolio template ready! Run: bun run dev'"
   },
-  "author": "Shreyansh Awadhiya",
-  "description": "A monorepo for portfolio",
-  "keywords": [
-    "portfolio-monorepo",
-    "monorepo"
-  ],
   "devDependencies": {
     "@types/bun": "latest",
     "concurrently": "^9.2.0"
