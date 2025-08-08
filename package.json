@@ -1,6 +1,7 @@
 {
   "name": "portfolio",
   "type": "module",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "concurrently \"cd apps/web && bun run dev\" \"cd apps/admin && bun run dev\" \"cd apps/server && bun run dev\" --names \"web,admin,server\" --prefix-colors \"blue,green,yellow\"",
